@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Headline:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Headline:wght@200..700&display=swap');
+* {
+    box-sizing: border-box; /* Define que a largura e altura dos elementos incluem padding e border, mas não a margin. Facilita o layout. */
+}
+
+h1 {
+    font-family: "Orbitron", sans-serif;
+    font-style: bold;
+}
+
+:root {
+    --primary-color: #352915;   /* Cor primária (azul claro) */
+    --secondary-color: #D3AE73; /* Cor secundária (cinza claro/texto) */
+    --tertiary-color: #F4E9CF;  /* Cor terciária (cinza para placeholders e detalhes) */
+    --bg-color: #F4E9CF;        /* Cor de fundo (cinza escuro) */
+}
+.logo {
+    height: 150px; /* Ou o tamanho que preferir */
+    width: auto;
+}
+
+body {
+    margin: 0; /* Remove a margem padrão do navegador. */
+    background: var(--primary-color); /* Define a cor de fundo usando a variável --primary-color. */
+    color: var(--bg-color); /* Define a cor padrão do texto usando a variável --bg-color. */
+    font-family: "Stack Sans Headline", sans-serif; /* Define a fonte principal da página. */
+}
+
+/* Adicione este código ao seu arquivo style.css */
+
+.main-header {
+    /* Substitua 'path/to/your/image.jpg' pelo caminho da sua imagem */
+    background-image: url('img/background-header.png');
+    
+    /* Faz a imagem cobrir todo o header, mantendo a proporção */
+    background-size: cover;
+
+    /* Centraliza a imagem no header */
+    background-position: center;
+
+    /* Evita que a imagem se repita */
+    background-repeat: no-repeat;
+
+    /* Adiciona um preenchimento para dar mais espaço interno, se necessário */
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    /* Garante que o texto dentro do header seja branco para contrastar com o fundo escuro */
+    color: white;
+}
+
+/* Ajuste a cor da descrição para garantir a legibilidade */
+.header-description {
+    color: #e0e0e0; /* Um cinza claro ou branco */
+}
+
+
+header {
+    padding: 1px 2px; /* Espaçamento interno (2rem em cima/baixo, 1rem nos lados). */
+    display: flex; /* Ativa o layout flexbox para alinhar os itens. */
+    align-items: center; /* Alinha os itens verticalmente ao centro. */
+    justify-content: space-around; /* Distribui os itens com espaço ao redor deles. */
+    position: sticky; /* Faz o cabeçalho "grudar" no topo da tela ao rolar. */
+    top: 0; /* Define a posição do cabeçalho grudado no topo. */
+    background: var(--bg-color); /* Cor de fundo do cabeçalho. */
+    z-index: 10; /* Garante que o cabeçalho fique acima de outros elementos da página. */
+    border-bottom: 1px solid var(--secondary-color); /* Adiciona uma borda inferior. */
+    gap: 1rem; /* Adiciona um espaço entre os elementos filhos diretos (h1 e div). */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-description {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.header-text h1 {
+    font-size: 1.5rem; /* Tamanho da fonte do título. */
+    margin: 0; /* Remove margens do título. */
+    font-weight: 500; /* Define o peso da fonte (semi-negrito). */
+    white-space: nowrap; /* Impede que o texto do título quebre em várias linhas. */
+    color: var(--primary-color); /* Define a cor do título. */
+}
+
+div.search-container input {
+    padding: 0.375rem 0.75rem; /* Espaçamento interno do campo de busca. */
+    border-radius: 1rem; /* Bordas arredondadas. */
+    border: 1px solid #352915; /* Borda com a cor terciária. */
+    background: #352915; /* Cor de fundo. */
+    font-family: "Roboto", sans-serif; /* Herda a fonte do elemento pai (body). */
+    font-size: 1.5rem; /* Tamanho da fonte do texto digitado. */
+    transition: all 0.2s ease; /* Animação suave para todas as propriedades que mudarem. */
+    width: 30rem; /* Largura do campo de busca. */
+    color: #F4E9CF; /* Cor do texto digitado. */
+    margin-right: .5rem; /* Margem à direita para separar do botão. */
+}
+
+div.search-container input::placeholder {
+    font-size: 1.2rem; /* Tamanho da fonte do texto de exemplo (placeholder). */
+    font-weight: 300; /* Peso da fonte do placeholder (mais leve). */
+    color: var(--tertiary-color); /* Cor do texto do placeholder. */
+}
+
+div.search-container input:focus {
+    outline: none; /* Remove a borda de foco padrão do navegador. */
+    border-color: var(--secondary-color); /* Muda a cor da borda ao focar. */
+    box-shadow: 0 0 0 0.1rem var(--tertiary-color); /* Adiciona um brilho (sombra) ao redor do campo quando focado. */
+}
+
+#botao-busca {
+    padding: 1rem 2rem; /* Espaçamento interno do botão. */
+    border-radius: 1rem; /* Bordas arredondadas. */
+    border: 1px #352915; /* Remove a borda padrão. */
+    cursor: pointer; /* Muda o cursor para uma "mãozinha" ao passar o mouse. */
+    font-family: inherit; /* Herda a fonte do elemento pai. */
+    font-weight: 500; /* Peso da fonte do texto do botão. */
+    font-size: 1rem; /* Tamanho da fonte do texto do botão. */
+    white-space: nowrap; /* Impede que o texto do botão quebre em várias linhas. */
+    transition: background-color 0.2s ease, color 0.2s ease; /* Animação suave para a cor de fundo e a cor do texto. */
+    background-color: var(--bg-color); /* Cor de fundo do botão. */
+    color: #352915; /* Cor do texto do botão. */
+    border: 1px solid #352915; /* Adiciona uma borda sutil. */
+}
+
+#botao-busca:hover {
+    background-color: #F4E9CF; /* Muda a cor de fundo ao passar o mouse. */
+    color: var(--primary-color); /* Muda a cor do texto ao passar o mouse. */
+    box-shadow: 0 0 0 0.1rem #F4E9CF; /* Adiciona um brilho ao redor do botão. */
+}
+
+#botao-busca:active {
+    transform: scale(0.98); /* Efeito de "pressionar" o botão, diminuindo seu tamanho levemente. */
+}
+
+main {
+    max-width: 80rem; /* Largura máxima para o conteúdo principal. */
+    margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente. */
+    margin-top: 2rem; /* Margem no topo para separar do cabeçalho. */
+    padding-bottom: 5rem; /* Adiciona espaço no final para o conteúdo não ser coberto pelo rodapé fixo. */
+}
+
+article {
+    /* Tornando o article um container flexível */
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Alinha verticalmente */
+    gap: 1.5rem; /* Espaço entre o texto e a imagem */
+
+    padding: 1.5rem; /* Espaçamento interno */
+    margin-bottom: 1.25rem; /* Margem inferior para separar os artigos. */
+    transition: transform 0.2s ease, border-bottom-color 0.3s ease; /* Animação suave */
+    border-bottom: 1px #9aa0a6; /* Linha divisória na parte inferior. */
+}
+
+article:hover {
+    cursor: pointer; /* Muda o cursor para uma "mãozinha". */
+    transform: scale(1.01); /* Leve zoom ao passar o mouse */
+}
+
+article h2 {
+    margin-top: 0; /* Remove a margem superior do título do artigo. */
+    font-weight: 600; /* Peso da fonte (negrito). */
+    font-size: 1.6rem; /* Tamanho da fonte. */
+    border-bottom: none; /* Sem linha inferior. */
+    padding-bottom: 10; /* Sem espaçamento interno inferior. */
+    margin-bottom: 0.25rem; /* Pequena margem inferior. */
+    color: var(--secondary-color); /* Cor do título usando a variável primária. */
+}
+
+/* Div que agrupa as informações de texto do mapa */
+.map-info {
+    flex: 1; /* Permite que a área de texto ocupe o espaço disponível */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos para a imagem miniatura do mapa */
+.card-image {
+    width: 200px;  /* Aumentei a largura da miniatura */
+    height: 112px; /* Altura (mantendo proporção 16:9) */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    border-radius: 5px; /* Bordas levemente arredondadas */
+    border: 3px solid var(--secondary-color);
+}
+
+article p {
+    margin: 0.5rem 0; /* Margem em cima e embaixo do parágrafo. */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade. */
+    font-size: 1rem; /* Tamanho da fonte. */
+    color: var(--bg-color); /* Cor do texto. */
+}
+
+article p strong {
+    color: var(--secondary-color); /* Cor para o texto em negrito (strong). */
+    font-weight: 500; /* Peso da fonte (normal). */
+}
+
+article a {
+    color: var(--bg-color); /* Cor dos links dentro do artigo. */
+    text-decoration: none; /* Remove o sublinhado padrão dos links. */
+    font-weight: 200; /* Peso da fonte (mais leve). */
+}
+
+article a:hover {
+    text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse sobre o link. */
+}
+
+
+.card-link {
+  text-decoration: none; /* Remove o sublinhado */
+  color: #ffffff;/* Altera a cor do texto para laranja */
+  padding-top: 150px;
+}
+.card-link:hover {
+  opacity: 0.8; /* Deixa o link um pouco transparente ao passar o mouse */
+}
+
+.footer {
+    position: fixed; /* Fixa o rodapé na janela de visualização. */
+    bottom: 0; /* Alinha o rodapé na parte inferior. */
+    left: 0; /* Alinha o rodapé na parte esquerda. */
+    width: 100%; /* Faz o rodapé ocupar toda a largura. */
+    color: var(--secondary-color); /* Cor do texto padrão do rodapé. */
+    background-color: #0f0c06; /* Cor de fundo do rodapé. */
+    padding: 15px 20px; /* Espaçamento interno. */
+    border-top: 1px solid var(--secondary-color); /* Linha superior para separar do conteúdo. */
+    font-size: 0.8rem; /* Tamanho de fonte menor para o rodapé. */
+    z-index: 10; /* Garante que o rodapé fique acima de outros elementos. */
+}
+
+.footer-location {
+    color: #9aa0a6; /* Cor para o texto de localização. */
+    margin-bottom: 10px; /* Margem inferior. */
+}
+
+.footer-links {
+    list-style: none; /* Remove os marcadores (bolinhas) da lista. */
+    display: flex; /* Ativa o layout flexbox. */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não couberem. */
+    justify-content: center; /* Centraliza os links horizontalmente. */
+    gap: 15px; /* Espaço entre os links. */
+}
+
+.footer-links a {
+    color: var(--bg-color); /* Cor dos links do rodapé. */
+    text-decoration: none; /* Remove o sublinhado. */
+    transition: color 0.2s; /* Animação suave para a mudança de cor. */
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color); /* Muda a cor do link ao passar o mouse. */
+}
+
+/* Media Queries: Regras que se aplicam apenas em determinados tamanhos de tela (design responsivo). */
+
+@media (max-width: 768px) {
+    /* Estilos para telas com largura máxima de 768px (tablets). */
+    header {
+        justify-content: center;
+        flex-direction: column; /* Organiza os itens do cabeçalho em coluna. */
+        padding: 1rem; /* Reduz o espaçamento interno. */
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .header-text h1 {
+        text-align: center; /* Centraliza o título. */
+        margin-bottom: 1rem; /* Adiciona margem inferior para separar do campo de busca. */
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    div.search-container input {
+        width: 90vw; /* A largura do input ocupa 90% da largura da tela (viewport width). */
+        font-size: 1.2rem; /* Reduz o tamanho da fonte. */
+    }
+
+    main {
+        padding: 0 1rem; /* Adiciona espaçamento lateral no conteúdo principal. */
+    }
+
+    article:hover {
+        transform: none; /* Remove o efeito de zoom no hover em telas menores (geralmente sem mouse). */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Estilos para telas com largura máxima de 480px (celulares). */
+    .header-text h1 {
+        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte do título. */
+        max-width: 70%; /* Limita a largura máxima do título. */
+        word-wrap: break-word; /* Permite que palavras longas quebrem para não estourar o layout. */
+    }
+
+    div.search-container input,
+    div.search-container input::placeholder {
+        font-size: 1rem; /* Reduz o tamanho da fonte do input e do placeholder. */
+    }
+
+    article h2 {
+        font-size: 1.3rem; /* Reduz o tamanho da fonte dos títulos dos artigos. */
+    }
+
+    div.search-container {
+        /* ATENÇÃO: Esta regra se aplica a TODAS as divs em telas pequenas. */
+        /* É melhor usar uma classe específica, como '.search-container'. */
+        display: flex; /* Ativa o flexbox. */
+        align-items: center; /* Centraliza os itens horizontalmente. */
+        justify-content: center; /* Centraliza os itens verticalmente. */
+        flex-direction: column; /* Organiza os itens em coluna. */
+        gap: 0.5rem; /* Espaço entre os itens. */
+    }
+    .footer {
+        display: none; /* Esconde o rodapé em telas muito pequenas. */
+    }
+    button {
+        /* ATENÇÃO: Esta regra se aplica a TODOS os botões em telas pequenas. */
+        /* É melhor usar o seletor #botao-busca para ser mais específico. */
+        margin-top: 1rem; /* Adiciona uma margem no topo do botão. */
+    }
+
+
+}

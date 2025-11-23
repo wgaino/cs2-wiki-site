@@ -1,0 +1,67 @@
+[
+
+{
+    "nome":"Dust 2",
+    "descricao": "O mapa mais jogado",
+    "ano": 1999,
+    "link": "https://counterstrike.fandom.com/wiki/Dust_II",
+    "imagem": "img/dust2.png"
+},
+
+{
+    "nome":"Mirage",
+    "descricao": "O mapa mais popular",
+    "ano": 2013,
+    "link": "https://counterstrike.fandom.com/wiki/Mirage",
+    "imagem": "img/mirage.png"
+},
+
+{
+    "nome":"Inferno",
+    "descricao": "Um mapa clássico com pontos de estrangulamento apertados.",
+    "ano": 1999,
+    "link": "https://counterstrike.fandom.com/wiki/Inferno",
+    "imagem": "img/inferno.png"
+},
+
+{
+    "nome":"Nuke",
+    "descricao": "Um mapa com vários níveis em uma usina nuclear.",
+    "ano": 1999,
+    "link": "https://counterstrike.fandom.com/wiki/Nuke",
+    "imagem": "img/nuke.png"
+},
+
+{
+    "nome":"Overpass",
+    "descricao": "Um mapa situado em um viaduto na Alemanha.",
+    "ano": 2013,
+    "link": "https://counterstrike.fandom.com/wiki/Overpass",
+    "imagem": "img/overpass.png"
+},
+
+{
+    "nome":"Vertigo",
+    "descricao": "Guerra no topo de um arranha-céu em construção.",
+    "ano": 2001,
+    "link": "https://counterstrike.fandom.com/wiki/Vertigo",
+    "imagem": "img/vertigo.png"
+},
+
+{
+    "nome":"Ancient",
+    "descricao": "Um sítio arqueológico na selva.",
+    "ano": 2020,
+    "link": "https://counterstrike.fandom.com/wiki/Ancient",
+    "imagem": "img/ancient.png"
+},
+
+{
+    "nome":"Anubis",
+    "descricao": "Um mapa egípcio criado pela comunidade.",
+    "ano": 2020,
+    "link": "https://counterstrike.fandom.com/wiki/Anubis",
+    "imagem": "img/anubis.png"
+}
+
+]
